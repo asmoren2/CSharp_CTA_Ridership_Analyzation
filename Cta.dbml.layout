@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Cta">
+  <DataContextMoniker Name="/CtaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="64e1de90-0726-4722-a471-29d7db10f8fa" absoluteBounds="2.875, 1.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CtaDataContext/Line" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d399d11-0817-4780-8d69-3bbb73e02970" absoluteBounds="2.89, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62d07c7b-3a7c-4731-87d1-804e2fabc5f3" absoluteBounds="2.875, 3.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CtaDataContext/Ridership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a08aa0f2-e808-41f2-b50c-7f0442a8a3f1" absoluteBounds="2.8899999999999997, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33187d1c-ae6c-4a91-a7b5-4faa052caa66" absoluteBounds="5.625, 1.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CtaDataContext/Station" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b53eeed-6f78-4bf7-9e53-cefcfc0fdf20" absoluteBounds="5.64, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 2.44399251302083); (5.25 : 2.81899251302083); (5.25 : 2.75); (4.875 : 3.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CtaDataContext/Station/Station_Ridership" />
+      <nodes>
+        <classShapeMoniker Id="33187d1c-ae6c-4a91-a7b5-4faa052caa66" />
+        <classShapeMoniker Id="62d07c7b-3a7c-4731-87d1-804e2fabc5f3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="701ac818-f9bd-4ca1-a9d3-388b57edfda7" absoluteBounds="0.5, 3.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CtaDataContext/StopDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb6e7d35-add5-4e49-879a-8fa859653c78" absoluteBounds="0.51500000000000012, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 1.84699625651042); (1.5 : 1.84699625651042); (1.5 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CtaDataContext/Line/Line_StopDetail" />
+      <nodes>
+        <classShapeMoniker Id="64e1de90-0726-4722-a471-29d7db10f8fa" />
+        <classShapeMoniker Id="701ac818-f9bd-4ca1-a9d3-388b57edfda7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f3ddf8af-ea6d-4613-b448-5eda493f88bd" absoluteBounds="6, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CtaDataContext/Stop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be06b6cb-b038-45fb-b0c8-1d07ffb5b85e" absoluteBounds="6.0150000000000006, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 4.9944482421875); (1.5 : 4.9944482421875); (1.5 : 4.56899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CtaDataContext/Stop/Stop_StopDetail" />
+      <nodes>
+        <classShapeMoniker Id="f3ddf8af-ea6d-4613-b448-5eda493f88bd" />
+        <classShapeMoniker Id="701ac818-f9bd-4ca1-a9d3-388b57edfda7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.8125 : 2.44399251302083); (6.8125 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CtaDataContext/Station/Station_Stop" />
+      <nodes>
+        <classShapeMoniker Id="33187d1c-ae6c-4a91-a7b5-4faa052caa66" />
+        <classShapeMoniker Id="f3ddf8af-ea6d-4613-b448-5eda493f88bd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
